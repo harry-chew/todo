@@ -1,0 +1,113 @@
+* {
+  border : 0;
+  padding : 0;
+  margin : 0;
+  /*font-family: 'Patua One', cursive;*/
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin : 0 auto;
+  align-items: center;
+  justify-content: center;
+
+}
+.grad {
+  width : 100%;
+  height : 100%;
+  z-index: -2;
+  position: fixed;
+  top : 0;
+  left : 0;
+  background-image: linear-gradient(#ffffff, #00ffff);
+}
+#header {
+  height : 5vh;
+  padding : 1rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+i {
+  pointer-events: none;
+}
+form {
+  display: flex;
+  width : 50%;
+  border : 1px solid rgba(0,0,0,0.5);
+}
+form input {
+  flex : 1;
+  border : 2px solid rgba(0,0,0,0);
+}
+form input:hover {
+  border : 2px solid rgba(255,0,0,0.5);
+}
+
+form input, form button, form select {
+  padding : 1rem;
+  font-size: 1.5rem;
+}
+
+.deleteBtn, .completeBtn {
+  color : black;
+  padding : 1rem;
+  font-size: 1.5rem;
+}
+.completeBtn {
+  background-color : rgba(0,255,0,0.75);
+}
+.completeBtn:hover {
+  background-color: rgba(0,0,0,0.5);
+  color : rgb(0,255,0);
+}
+
+.deleteBtn {
+  background-color: rgba(255,0,0,0.75);
+}
+
+.completed {
+  opacity: 0.5;
+}
+
+#todo-list {
+  font-size: 2rem;
+  width : 50%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type : none;
+}
+
+#todo-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom : 1px solid grey;
+  align-items: center;
+}
+
+#todo-list li p {
+  flex : 1;
+}
+
+#todo-list li:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+#todo-add-button {
+  background-color : white;
+  color : black;
+  transition: all 0.2s ease;
+}
+#todo-add-button:hover {
+  background-color: rgba(0,0,0,0.5);
+  color : white;
+}
+
+#todo-filter:hover {
+  background-color : rgba(0,0,0,0.1);
+}
