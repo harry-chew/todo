@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="grad">
+
+    </div>
+    <h1 id="header">Todo List App</h1>
+    <div id="save">
+      <button id="save-button" type="button" name="button">Save</button>
+      <select name="save-options" id="save-options">
+        <option value="txt">Txt</option>
+        <!--<option value="csv">CSV</option>-->
+      </select>
+    </div>
+    
+    <form>
+      
+      <input id="todo-input" type="text" name="todo-input" value="" autofocus>
+      <button id="todo-add-button" type="submit" name="todo-add-button"><i class="fa fa-plus"></i></button>
+      <select id="todo-filter"class="" name="">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="uncompleted">Uncompleted</option>
+      </select>
+    </form>
+
+    <ul id="todo-list">
+    </ul>
+  <script type="text/javascript" src="js/save.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
