@@ -13,6 +13,7 @@ function addTodo(event) {
   if(!text == "") {
     //create li item and para tag
     const todoItem = document.createElement("li");
+    todoItem.classList.add('todo-item');
     const todoText = document.createElement("p");
     //place input field text into para element
     todoText.innerText = text;

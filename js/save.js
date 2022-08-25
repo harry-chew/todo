@@ -6,18 +6,25 @@ saveButton.addEventListener('click', saveToFile);
 
 
 function saveToFile() {
-    const data = { username: 'example' };
+    const user = { username: 'example' };
+    var formData = new FormData();
+    //formData.append('username', user.username);
 
-    fetch('inc/save.php', {
+    const todoItems = document.querySelectorAll(".todo-item");
+    for(let i = 0; i < todoItems.length; i++) {
+      let todoText = todoItems[i].querySelector("p").innerText;
+      formData.append(i, todoText);
+    }
+
+    fetch('../inc/save.php', {
       method: 'POST', // or 'PUT'
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
+      body: formData,
     })
-      .then((response) => response.json())
+      .then((response) => {
+        return response.text();
+      })
       .then((data) => {
-        console.log('Success:', data);
+        console.log(data);
       })
       .catch((error) => {
         console.error('Error:', error);
