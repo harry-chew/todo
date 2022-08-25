@@ -5,9 +5,13 @@
      $date = date("d-m-Y");
      $file = fopen($date . ".txt", "w") or die("Unable to open file!");
      
+     $fileName = $date . ".txt";
      fwrite($file, $date . "\n");
      foreach($_POST as $d) {
           fwrite($file, $d . "\n");
      }
-     //fwrite($file, json_encode($_POST));
-     echo json_encode($_POST);
+
+     fclose($file);
+
+
+     //echo json_encode($_POST);
