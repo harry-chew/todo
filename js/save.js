@@ -1,11 +1,29 @@
 const saveButton = document.getElementById('save-button');
 const saveFileType = document.getElementById('save-options');
 
-saveButton.addEventListener('click', saveToFile);
+saveButton.addEventListener('click', saveType);
+
+function saveType() {
+  let saveType = saveFileType.value;
+  switch (saveType) {
+    case "txt":
+      saveToFile();
+      break;
+    case "csv":
+      saveToCSV();
+    break;
+    default:
+      break;
+  }
+}
 
 
+function saveToCSV() {
+  console.log("save to csv");
+}
 
 function saveToFile() {
+    console.log("save to file");
     const user = { username: 'example' };
     var formData = new FormData();
     //formData.append('username', user.username);
@@ -16,7 +34,7 @@ function saveToFile() {
       formData.append(i, todoText);
     }
 
-    fetch('../inc/save.php', {
+    fetch('../inc/savetofile.php', {
       method: 'POST', // or 'PUT'
       body: formData,
     })
